@@ -1,3 +1,7 @@
+body {
+    place-items: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -7,12 +11,13 @@
 }
 
 .horizontalContainer {
-    padding: calc(800px/32);
+    flex: 1 1 0px;
 }
 
 .verticalContainer {
     display: flex;
     flex-direction: row;
+    flex: 1 1 0px;
 }
 
 .hovered {
