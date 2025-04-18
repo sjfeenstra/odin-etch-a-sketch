@@ -7,7 +7,12 @@ for(i= 0; i < size; i++){
     container.appendChild(verticalContainer);
     for(j= 0; j < size; j++){
         const horizontalContainer = document.createElement("div");
-        horizontalContainer.setAttribute("class", "horizontalContainer");
+        horizontalContainer.classList.add("horizontalContainer");
         verticalContainer.appendChild(horizontalContainer);
+
+        horizontalContainer.addEventListener("mouseover", () =>{
+            horizontalContainer.classList.add("hovered");
+        })
     }
 }
+

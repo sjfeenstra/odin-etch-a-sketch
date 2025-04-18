@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 800px;
     height: 800px;
-    border: solid black;
+    border: solid black ;
 }
 
 .horizontalContainer {
@@ -13,4 +13,8 @@
 .verticalContainer {
     display: flex;
     flex-direction: row;
+}
+
+.hovered {
+    background-color: black;
 }
