@@ -14,10 +14,10 @@ function createGrid(size) {
       horizontalContainer.style.opacity = 0;
       verticalContainer.appendChild(horizontalContainer);
 
-      horizontalContainer.addEventListener("mouseover", function(e) {
-        horizontalContainer.style.backgroundColor = "black";
+      horizontalContainer.addEventListener("mouseover", function (e) {
+        horizontalContainer.style.backgroundColor = `rgb(${randomRGBValue()}`;
         if (e.target.style.opacity < 1) {
-            e.target.style.opacity = parseFloat(e.target.style.opacity) + 0.1
+          e.target.style.opacity = parseFloat(e.target.style.opacity) + 0.1;
         }
       });
     }
@@ -27,10 +27,14 @@ function createGrid(size) {
 createGrid(DEFAULT_SIZE);
 
 resetButton.addEventListener("click", () => {
-    let gridSize = 0;
-    while (gridSize > 100 || gridSize <= 0 || !Number.isInteger(gridSize)) {
-      gridSize = parseInt(prompt("What grid size do you want?"));
-    }
-    container.replaceChildren();
-    createGrid(gridSize)
-  });
+  let gridSize = 0;
+  while (gridSize > 100 || gridSize <= 0 || !Number.isInteger(gridSize)) {
+    gridSize = parseInt(prompt("What grid size do you want?"));
+  }
+  container.replaceChildren();
+  createGrid(gridSize);
+});
+
+function randomRGBValue() {
+  return Math.floor(Math.random() * 256)+","+ Math.floor(Math.random() * 256) +","+ Math.floor(Math.random() * 256)
+}

@@ -12,16 +12,10 @@ body {
 
 .horizontalContainer {
     flex: 1 1 0px;
-    opacity: 0.5;
 }
 
 .verticalContainer {
     display: flex;
     flex-direction: row;
     flex: 1 1 0px;
-}
-
-.hovered {
-    background-color: black;
-    opacity: 0;
 }
