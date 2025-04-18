@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 800px;
+    border: solid black;
+}
+
+.horizontalContainer {
+    padding: calc(800px/32);
+}
+
+.verticalContainer {
+    display: flex;
+    flex-direction: row;
+}
