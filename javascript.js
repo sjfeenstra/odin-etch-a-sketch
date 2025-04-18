@@ -9,12 +9,16 @@ function createGrid(size) {
     verticalContainer.setAttribute("class", "verticalContainer");
     container.appendChild(verticalContainer);
     for (j = 0; j < size; j++) {
-      const horizontalContainer = document.createElement("div");
+      let horizontalContainer = document.createElement("div");
       horizontalContainer.classList.add("horizontalContainer");
+      horizontalContainer.style.opacity = 0;
       verticalContainer.appendChild(horizontalContainer);
 
-      horizontalContainer.addEventListener("mouseover", () => {
-        horizontalContainer.classList.add("hovered");
+      horizontalContainer.addEventListener("mouseover", function(e) {
+        horizontalContainer.style.backgroundColor = "black";
+        if (e.target.style.opacity < 1) {
+            e.target.style.opacity = parseFloat(e.target.style.opacity) + 0.1
+        }
       });
     }
   }

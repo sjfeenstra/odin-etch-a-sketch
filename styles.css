@@ -12,6 +12,7 @@ body {
 
 .horizontalContainer {
     flex: 1 1 0px;
+    opacity: 0.5;
 }
 
 .verticalContainer {
@@ -22,4 +23,5 @@ body {
 
 .hovered {
     background-color: black;
+    opacity: 0;
 }
